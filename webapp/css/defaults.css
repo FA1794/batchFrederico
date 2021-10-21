@@ -1,0 +1,47 @@
+:root{
+   /*Elements size fix*/
+    --appMaxWidth: 95rem;
+    --appMinWidth: 52rem;
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> DEFAULT CLASSES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.global-defaultPageWidthResponsive {
+    width: 90% !important;
+    min-width: var(--appMinWidth) !important;
+    max-width: var(--appMaxWidth);
+    margin: auto;
+}
+
+.sapMITBContent {
+    border: none !important; 
+}
+
+.sapMITBHead {
+   width: 90% !important;
+    min-width: var(--appMinWidth) !important;
+    max-width: var(--appMaxWidth);
+    margin: auto;
+    padding: 0px !important;
+}
+
+ /*=================================== CLASSES FOR POPUP/DIALOG =====================================*/
+ 
+ .defaultPopupProperties{
+    border-radius: 10px;
+ }
+ 
+ .defaultPopupProperties >section >div >div >div >div{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+ }
+ 
+ .defaultPopupProperties .header >div >span{
+    font-size: 14px;
+ }
+
+ .sapMDialogScroll{
+    height:100%;
+ }

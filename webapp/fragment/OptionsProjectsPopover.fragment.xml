@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  xmlns:u="sap.ui.unified"
+  xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+  <Popover showArrow="true" class="batchData-actionsPopOver" placement="PreferredBottomOrFlip" showHeader="false" id="">
+    <VBox>
+      <Button text="Download" class="batchData-popoverOptionsProjects-texts" type="Unstyled" press="handleDownloadFile"/>
+    </VBox>
+    <VBox>
+      <Button text="Update" class="batchData-popoverOptionsProjects-texts" type="Unstyled" press="handleUpdateFile"/>
+    </VBox>
+  </Popover>
+</core:FragmentDefinition>

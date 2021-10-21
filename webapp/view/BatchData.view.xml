@@ -1,0 +1,121 @@
+<mvc:View controllerName="batchfrederico.controller.BatchData"
+  xmlns="sap.m"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core"
+  xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+  <Page showHeader="false">
+    <HBox class="batchData-header">
+      <HBox class="global-defaultPageWidthResponsive" alignItems="Center" justifyContent="SpaceBetween">
+        <core:Icon size="22px" tooltip = "Home" press="onNavBack" src="sap-icon://home" class="home-icon"/>
+        <HBox>
+          <Text text="Batch"/>
+          <HBox class = "semaphore-green sapUiTinyMarginBegin"/>
+        </HBox>
+        <HBox/>
+      </HBox>
+    </HBox>
+
+    <VBox class="global-defaultPageWidthResponsive">
+      <HBox items="{path:'batchData>/currentData/generalBatchData'}" class="sapUiMediumMarginTopBottom grid">
+        <VBox class="sapUiMediumMarginBottom sapUiMediumMarginEnd" width="200px">
+          <VBox visible="{= ${batchData>isEditable} === false}">
+            <Text text="{batchData>label}" class="labelText"/>
+            <Text text="{batchData>value}"/>
+          </VBox>
+          <VBox visible="{= ${batchData>isEditable}}">
+            <HBox>
+              <Text text="{batchData>label}" class="labelText"/>
+              <Text text="*" tooltip="Download or Upload a new file" class="sapUiTinyMarginBegin"/>
+            </HBox>
+            <Button text="{batchData>value}" id="idBatchDataFile" class="batchData-file-edition" type="Unstyled" press="openOptionsPopover"/>
+          </VBox>
+        </VBox>
+      </HBox>
+    </VBox>
+
+    <IconTabBar class="sapUiResponsiveContentPadding">
+      <items>
+        <IconTabFilter key="inspectionLotData" text="Inspection Lot Data">
+          <HBox alignItems="Center" class="global-defaultPageWidthResponsive">
+            <Text text="Inspection Lot Data" class="sapUiSmallMarginEnd"/>
+            <HBox class = "semaphore-green"/>
+          </HBox>
+
+          <VBox class="global-defaultPageWidthResponsive">
+            <HBox items="{path:'batchData>/currentData/inspectionLotData'}" class="sapUiMediumMarginTopBottom grid">
+              <VBox class="sapUiMediumMarginBottom sapUiMediumMarginEnd" width="200px">
+                <Text text="{batchData>label}" class="labelText"/>
+                <Text text="{batchData>value}"/>
+              </VBox>
+            </HBox>
+          </VBox>
+        </IconTabFilter>
+
+        <IconTabFilter id="iconTabBar1" key="LIMSMESData" text="LIMS/MES Data">
+          <items>
+            <IconTabFilter key="LIMSData" text="LIMS Data">
+              <HBox alignItems="Center" class="global-defaultPageWidthResponsive">
+                <Text text="LIMS Data" class="sapUiSmallMarginEnd"/>
+                <HBox class = "semaphore-green"/>
+              </HBox>
+              <VBox class="global-defaultPageWidthResponsive">
+                <HBox items="{path:'batchData>/currentData/LIMSData'}" class="sapUiMediumMarginTopBottom grid">
+                  <VBox class="sapUiMediumMarginBottom sapUiMediumMarginEnd" width="200px">
+                    <Text text="{batchData>label}" class="labelText"/>
+                    <Text text="{batchData>value}"/>
+                  </VBox>
+                </HBox>
+              </VBox>
+            </IconTabFilter>
+            <IconTabFilter key="MESData" text="MES Data">
+              <HBox alignItems="Center" class="global-defaultPageWidthResponsive">
+                <Text text="MES Data" class="sapUiSmallMarginEnd"/>
+                <HBox class = "semaphore-green"/>
+              </HBox>
+              <VBox class="global-defaultPageWidthResponsive">
+                <HBox items="{path:'batchData>/currentData/MESData'}" class="sapUiMediumMarginTopBottom grid">
+                  <VBox class="sapUiMediumMarginBottom sapUiMediumMarginEnd" width="200px">
+                    <Text text="{batchData>label}" class="labelText"/>
+                    <Text text="{batchData>value}"/>
+                  </VBox>
+                </HBox>
+              </VBox>
+            </IconTabFilter>
+          </items>
+        </IconTabFilter>
+
+        <IconTabFilter key="serializationData" text="Serialization Data">
+          <HBox alignItems="Center" class="global-defaultPageWidthResponsive">
+            <Text text="Serialization Data" class="sapUiSmallMarginEnd"/>
+            <HBox class = "semaphore-green"/>
+          </HBox>
+          <VBox class="global-defaultPageWidthResponsive">
+            <HBox items="{path:'batchData>/currentData/serializationData'}" class="sapUiMediumMarginTopBottom grid">
+              <VBox class="sapUiMediumMarginBottom sapUiMediumMarginEnd" width="200px">
+                <Text text="{batchData>label}" class="labelText"/>
+                <Text text="{batchData>value}"/>
+              </VBox>
+            </HBox>
+          </VBox>
+        </IconTabFilter>
+
+        <IconTabFilter key="vendorData" text="Vendor Data">
+          <HBox alignItems="Center" class="global-defaultPageWidthResponsive">
+            <Text text="Vendor Data" class="sapUiSmallMarginEnd"/>
+            <HBox class = "semaphore-green"/>
+          </HBox>
+          <VBox class="global-defaultPageWidthResponsive">
+            <HBox items="{path:'batchData>/currentData/vendorData'}" class="sapUiMediumMarginTopBottom grid">
+              <VBox class="sapUiMediumMarginBottom sapUiMediumMarginEnd" width="200px">
+                <Text text="{batchData>label}" class="labelText"/>
+                <Text text="{batchData>value}"/>
+              </VBox>
+            </HBox>
+          </VBox>
+        </IconTabFilter>
+      </items>
+    </IconTabBar>
+  </Page>
+
+</mvc:View>

@@ -1,0 +1,11 @@
+<mvc:View controllerName="batchfrederico.controller.Home"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+	xmlns="sap.m">
+	<App id="app">
+		<Page id="page" title="{i18n>title}">
+			<VBox visible="{= ${main>/currentData/batchesData}.length > 0}" items="{path:'main>/currentData/batchesData'}" class="sapUiMediumMarginBottom">
+				<Button text="{main>label}" press="openBatchDataPage"/>
+			</VBox>
+		</Page>
+	</App>
+</mvc:View>

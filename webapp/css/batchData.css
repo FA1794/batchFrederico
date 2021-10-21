@@ -1,0 +1,68 @@
+.batchData-header {
+  background-color: white;
+  height: 50px;
+}
+
+.home-icon {
+  outline: none !important;
+}
+
+.grid {
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 1rem;
+}
+
+.labelText {
+  font-weight: bolder !important;
+  text-decoration: underline !important;
+}
+
+.batchData-file-edition{
+    padding: 0px !important;
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.batchData-file-edition:focus {
+    outline: none !important;
+}
+
+.batchData-file-edition:hover{
+    cursor: pointer;
+}
+
+.batchData-actionsPopOver {
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 5px;
+ }
+ 
+ .batchData-actionsPopOver > div {
+    background-color: transparent !important;
+ }
+
+.batchData-popoverOptionsProjects-texts{
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    cursor: pointer !important;
+}
+
+.semaphore-green {
+  border-radius: 50%;
+  background-color:green;
+  width: 20px;
+  height:20px;
+  font-size : 20px;
+}
+
+.semaphore-red {
+  border-radius: 50%;
+  background-color:red;
+  width: 20px;
+  height:20px;
+  font-size : 20px;
+}
